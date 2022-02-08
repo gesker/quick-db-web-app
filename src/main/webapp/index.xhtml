@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+<h:form id="main_form">
+
+    <h:head>
+        <h:outputStylesheet library="webjars" name="primeflex/3.1.0/primeflex.min.css"/>
+        <h:outputStylesheet library="css" name="default.css"/>
+        <title>
+            <h:outputText value="#{messages['default.page.title']}"/>
+        </title>
+    </h:head>
+
+    <h:body>
+        <p:growl id="growl" sticky="true" showDetail="true"/>
+        <h:dataTable value="#{myBackingBeanBB.myJPAObjectList}" var="myJpaObject">
+
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{myJpaObject.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                #{myJpaObject.nme}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                #{myJpaObject.description}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Created</f:facet>
+                #{myJpaObject.createdOn}
+            </h:column>
+
+        </h:dataTable>
+    </h:body>
+
+</h:form>
+</html>

@@ -1,0 +1,22 @@
+.label {
+    width: 25%;
+    padding: 4px;
+}
+
+.value {
+    width: 50%;
+    padding: 4px;
+}
+
+.msg {
+    width: 25%;
+    padding: 4px;
+    color: red;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+}

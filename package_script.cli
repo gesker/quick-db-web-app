@@ -1,0 +1,2 @@
+# jboss-cli.sh commands go here
+/system-property=somePropertyName:add(value=somePropertyValue)

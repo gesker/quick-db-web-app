@@ -1,0 +1,10 @@
+{
+  "realm": "TheRealm",
+  "auth-server-url": "https://the.url.to.the.oide.endpoint/auth/",
+  "provider-url": "http://${env.OIDC_HOST}:${env.OIDC_PORT}/auth/realms/TheRealm",
+  "ssl-required": "always",
+  "resource": "client-config-on-oauth-provider",
+  "public-client": true,
+  "confidential-port": 0,
+  "enable-cors": true
+}

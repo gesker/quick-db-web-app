@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quick-service
+  labels:
+    purpose: reach-quick
+spec:
+  ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: quick
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quick
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quick
+  template:
+    metadata:
+      labels:
+        app: quick
+    spec:
+      containers:
+        - env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          image: your-docker-repository:latest
+          imagePullPolicy: Always
+          name: quick
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP

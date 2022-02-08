@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="https://jakarta.ee/xml/ns/persistence"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="MyPersistenceUnit" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:jboss/datasources/PostgreSQLDS</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <validation-mode>AUTO</validation-mode>
+        <properties>
+            <property name="hibernate.cache.use_minimal_puts" value="false"/>
+            <property name="hibernate.cache.use_query_cache" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.connection.autocommit" value="true"/>
+            <property name="hibernate.connection.zeroDateTimeBehavior" value="convertToNull"/>
+            <property name="hibernate.current_session_context_class" value="jta"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.generate_statistics" value="false"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.id.new_generator_mappings" value="true"/>
+            <property name="hibernate.integration.spatial.enabled" value="true"/>
+            <property name="hibernate.jdbc.batch_size" value="1000"/>
+            <property name="hibernate.jdbc.time_zone" value="UTC"/>
+            <property name="hibernate.jdbc.use_get_generated_keys" value="true"/>
+            <property name="hibernate.jpa.compliance.transaction" value="true"/>
+            <property name="hibernate.jta.cacheTransactionManager" value="true"/>
+            <property name="hibernate.jta.cacheUserTransaction" value="true"/>
+            <property name="hibernate.order_inserts" value="true"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.transaction.auto_close_session" value="true"/>
+            <property name="hibernate.transaction.coordinator_class" value="jta"/>
+            <property name="hibernate.transaction.jta.platform"
+                      value="org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform"/>
+
+            <!-- Make JPA verbose to console -->
+            <!-- TODO Set to false on production -->
+            <property name="show_sql" value="true"/>
+            <property name="format_sql" value="false"/>
+            <property name="use_sql_comments" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
