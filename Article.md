@@ -14,7 +14,7 @@ versions of the Wildfly Application Server are compatible with Jakarta EE versio
 Wildfly project [has plans in place](https://www.wildfly.org/news/2022/01/21/WildFly-2022/) to be ready for the upcoming
 release of Jakarta 10 and perhaps the Wildfly project will issue a “preview” of their Application Server so that one can
 take the next release of the standard for a spin. Time will tell. For now we’ll focus on Wildfly 26.0.1 PREVIEW --
-release in the last week of January -- and Jakarta 9.1.
+released in the last week of January -- and Jakarta 9.1.
 
 ## First new toy
 
