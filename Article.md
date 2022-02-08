@@ -6,8 +6,7 @@ I love new toys. I really love new toys in technology stacks that are proven. I 
 play with new technology that is anticipated in products that are proven. Toys that are tools are the best of all.
 
 Here I am going to discuss two new toys that when used together may very well become a must-have arrow for your software
-development quiver. These tools are the **wildfly-jar-maven-plugin** and the brand new **
-wildfly-datasources-preview-galleon-pack** from the Wildfly project.
+development quiver. These tools are the **wildfly-jar-maven-plugin** and the brand new **wildfly-datasources-preview-galleon-pack** from the Wildfly project.
 
 Wildfly which is the upstream project for the JBoss Application Server from RedHat is a great solution for many
 projects. The application server is Jakarta EE compatible with version 8 of the specification and newer “preview”
