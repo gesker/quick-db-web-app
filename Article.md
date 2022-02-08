@@ -239,7 +239,7 @@ These are not just new toys but useful tools. Try out the wildfly-jar-maven-plug
 wildfly-datasources-preview-galleon-pack if you are checking out wildfly-preview and need to communicate with your
 database.
 
-I posted a small sample project up on [github here]() if you’d like to take this combination of new tools for a try and
+I posted a small sample project up on [github here](https://github.com/gesker/quick-db-web-app) if you’d like to take this combination of new tools for a try and
 are in a hurry. That trivial Dockerfile mentioned earlier and, for good measure, a sample Kubernetes yaml file are in
 the repository, too.
 
