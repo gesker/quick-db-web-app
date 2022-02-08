@@ -185,7 +185,7 @@ wildfly-jar-maven-plugin…
 
 One essential tip!
 
-* You will notice that no where did we put in settings for the application to find out database server and the database
+* You will notice that no where did we put in settings for the application to find our database server and the database
   within that server. The wildfly-datasources-preview-galleon-pack will read this information from environment
   variables. Now, you can set properties inside Wildfly as well but in practice I'd recommend environment variables.
   This lends itself to containerization of the Application Server / Application Uber Jar.
