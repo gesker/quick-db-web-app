@@ -299,7 +299,7 @@ database.
 I posted a small sample project up on [github here](https://github.com/gesker/quick-db-web-app) if you’d like to take this combination of new tools for a try and
 are in a hurry. That trivial Dockerfile mentioned earlier and, for good measure, a sample Kubernetes yaml file are in the repository, too. The sample code has a reference sql file, configured JPA persistence unit and JPA Object and a JSF page to display data if you choose to populate the table. The **wildfly-datasources-preview-galleon-pack** get's your bootable jar to be database aware with very little effort so we might as fetch some data and display it. 
 
-Thanks again to the  [wildfly-extras](https://github.com/wildfly-extras/wildfly-datasources-galleon-pack) team. So many good tools come out of the Wildfly and these tools are not the least of these good things and adds to the pleasure of developing applications using [Jakarta](https://jakarta.ee)!
+Thanks again to the  [wildfly-extras](https://github.com/wildfly-extras/wildfly-datasources-galleon-pack) team. So many good tools come out of the Wildfly and these tools are not the least of these good things and each adds to the pleasure of developing applications using [Jakarta](https://jakarta.ee)!
 
 ---
 ### Author
