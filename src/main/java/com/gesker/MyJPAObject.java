@@ -24,7 +24,6 @@ import java.io.Serializable;
 )
 
 @SQLDelete(sql = "UPDATE my_jpa_data_table SET enabled = false WHERE id = ?")
-@SequenceGenerator(name = "my_jpa_data_table_id_seq", sequenceName = "my_jpa_data_tableid_seq", initialValue = 1, allocationSize = 1)
 public class MyJPAObject extends MyJpaMappedSuperClass implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -45,8 +44,8 @@ public class MyJPAObject extends MyJpaMappedSuperClass implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "my_jpa_data_table_id_seq")
-    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true)
     public long getId() {
         return this.id;
     }
@@ -56,7 +55,7 @@ public class MyJPAObject extends MyJpaMappedSuperClass implements Serializable {
     }
 
 
-    @Column(name = "nme", unique = true, nullable = false, length = 10)
+    @Column(name = "nme", length = 10)
     public String getNme() {
         return this.nme;
     }
@@ -66,7 +65,7 @@ public class MyJPAObject extends MyJpaMappedSuperClass implements Serializable {
     }
 
 
-    @Column(name = "description", nullable = false, length = 25)
+    @Column(name = "description", length = 25)
     public String getDescription() {
         return this.description;
     }
