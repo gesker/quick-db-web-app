@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS my_jpa_data_table (id BIGSERIAL PRIMARY KEY, nme VARCHAR(20), description VARCHAR(35));
+

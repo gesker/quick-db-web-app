@@ -12,7 +12,9 @@
         <validation-mode>AUTO</validation-mode>
         <properties>
 
-            <property name="javax.persistence.sql-load-script-source" value="META-INF/my_jpa_data_table.sql" />
+            <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create_my_jpa_data_table.sql" />
+            <property name="jakarta.persistence.sql-load-script-source" value="META-INF/my_jpa_data_table.sql" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.cache.use_minimal_puts" value="false"/>
             <property name="hibernate.cache.use_query_cache" value="true"/>
             <property name="hibernate.cache.use_second_level_cache" value="true"/>
@@ -21,7 +23,6 @@
             <property name="hibernate.current_session_context_class" value="jta"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
             <property name="hibernate.generate_statistics" value="false"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.id.new_generator_mappings" value="true"/>
             <property name="hibernate.integration.spatial.enabled" value="true"/>
             <property name="hibernate.jdbc.batch_size" value="1000"/>
