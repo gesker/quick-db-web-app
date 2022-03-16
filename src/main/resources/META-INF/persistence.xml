@@ -11,6 +11,8 @@
         <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
         <validation-mode>AUTO</validation-mode>
         <properties>
+
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/my_jpa_data_table.sql" />
             <property name="hibernate.cache.use_minimal_puts" value="false"/>
             <property name="hibernate.cache.use_query_cache" value="true"/>
             <property name="hibernate.cache.use_second_level_cache" value="true"/>
@@ -38,7 +40,7 @@
             <!-- Make JPA verbose to console -->
             <!-- TODO Set to false on production -->
             <property name="show_sql" value="true"/>
-            <property name="format_sql" value="false"/>
+            <property name="format_sql" value="true"/>
             <property name="use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
